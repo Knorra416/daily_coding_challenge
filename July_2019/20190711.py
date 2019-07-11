@@ -23,3 +23,22 @@ def check_sum(num_list, target):
                 result = False
 
     return result
+
+
+# SOLUTION
+def two_sum(lst, k):
+    for i in range(len(lst)):
+        for j in range(len(lst)):
+            if i != j and lst[i] + lst[j] == k:
+                return True
+    return False
+
+
+# OR
+def two_sum(lst, k):
+    seen = set()
+    for num in lst:
+        if k - num in seen:
+            return True
+        seen.add(num)
+    return False
