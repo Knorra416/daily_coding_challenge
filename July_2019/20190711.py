@@ -8,7 +8,7 @@
 def check_sum(num_list, target):
     """
     return bool if the provided list has two numbers that sum to the target.
-    :param num_list: list
+    :param num_list: list of ints
     :param target: int
     :return: bool
     """
