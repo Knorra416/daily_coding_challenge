@@ -23,7 +23,3 @@ def check_sum(num_list, target):
                 result = False
 
     return result
-
-
-
-
