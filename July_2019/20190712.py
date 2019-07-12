@@ -13,8 +13,8 @@ import numpy as np
 def prod_array(input_list):
     """
     this function returns the product of a list for all elements except the one at i
-    :param list:
-    :return:
+    :param input_list:
+    :return: list of products
     """
     output_list = []
     for val in range(len(input_list)):
