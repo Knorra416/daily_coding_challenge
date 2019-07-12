@@ -23,6 +23,3 @@ def prod_array(input_list):
         output_list.append(product)
 
     return output_list
-
-
-
