@@ -38,3 +38,12 @@ def cdr(f):
     :return: int
     """
     return f(make_list)[1]
+
+
+# Solutions
+def car(pair):
+    return pair(lambda a, b: a)
+
+
+def cdr(pair):
+    return pair(lambda a, b: b)
