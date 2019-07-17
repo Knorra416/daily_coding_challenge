@@ -21,9 +21,9 @@ def decoder(message, mapping):
     """
     decoded_options = []
     for i in range(len(message)):
-        remaining = message[i+1:]
+        remaining = message[int(i)+1:]
         if len(remaining) < 3:
-            decode = mapping[i+1] + mapping[remaining]
+            decode = mapping[int(i)+1] + mapping[int(remaining)]
             decoded_options.append(decode)
         else:
             continue
