@@ -21,14 +21,15 @@ def decoder(message, mapping):
     """
     decoded_options = []
     for i in range(len(message)):
-        remaining = message[int(i)+1:]
+        remaining = [y for x, y in enumerate(message) if x != i]
+        remaining = ''.join(remaining)
         if len(remaining) < 3:
-            decode = mapping[int(i)+1] + mapping[int(remaining)]
+            decode = mapping[int(message[i])-1] + mapping[int(remaining)-1]
             decoded_options.append(decode)
         else:
             continue
 
-    return len(decoded_options)
+    return len(decoded_options), decoded_options
 
 
 
