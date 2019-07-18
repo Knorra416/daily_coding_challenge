@@ -32,4 +32,17 @@ def decoder(message, mapping):
     return len(decoded_options), decoded_options
 
 
+# Solution
+def num_encodings(s):
+    if s.startswith('0'):
+        return 0
+    elif len(s) <= 1: # This covers empty string
+        return 1
 
+    total = 0
+
+    if int(s[:2]) <= 26:
+        total += num_encodings(s[2:])
+
+    total += num_encodings(s[1:])
+    return total
