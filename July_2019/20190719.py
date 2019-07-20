@@ -25,3 +25,12 @@ def max_non_adj(check_list):  # my best attempt, doesn't quite get there.
         sum_list.append(nonadj_sum)
 
     return max(sum_list)
+
+
+def largest_non_adjacent(arr):
+    if not arr:
+        return 0
+
+    return max(
+            largest_non_adjacent(arr[1:]),
+            arr[0] + largest_non_adjacent(arr[2:]))
