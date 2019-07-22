@@ -14,3 +14,18 @@
 # you could climb any number from a set of positive integers X? For example,
 # if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
 
+# help from online. Recursion is always important! 
+
+def findstep(n):
+    if n == 1 or n == 0:
+        return 1
+    elif n == 2:
+        return 2
+
+    else:
+        return findstep(n - 1) + findstep(n - 2)
+
+
+
+
+
