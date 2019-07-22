@@ -25,8 +25,3 @@ def findstep(n):
 
     else:
         return findstep(n - 1) + findstep(n - 2)
-
-
-
-
-
