@@ -25,3 +25,10 @@ def findstep(n):
 
     else:
         return findstep(n - 1) + findstep(n - 2)
+
+
+# Solution
+def staircase(n):
+    if n <= 1:
+        return 1
+    return staircase(n - 1) + staircase(n - 2)
