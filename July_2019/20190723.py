@@ -19,7 +19,7 @@ def dist_substring(string, distinct_char):
     else:
         start = 0
         subset = distinct_list[start:distinct_char]
-        
+
 
 
 
