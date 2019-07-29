@@ -23,6 +23,20 @@ def order_id_logging(order_id_list, n, logger):
     return get_last(n)
 
 
+# Solution
+class Log(object):
+    def __init__(self, n):
+        self._log = []
+        self.n = n
+
+    def record(self, order_id):
+        if len(self._log) >= self.n:
+            self._log.pop(0)
+        self._log.append(order_id)
+
+    def get_last(self, i):
+        return self._log[-i]
+
 
 
 
