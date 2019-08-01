@@ -20,6 +20,26 @@ def min_classrooms(class_times):
     return list_schedule
 
 
+# Solution
+def overlaps(a, b):
+    start_a, end_a = a
+    start_b, end_b = b
+    # It doesn't overlap if it's like this:
+    #   |start_a .... end_a|  <---> |start_b ... end_b|
+    # or like this:
+    #   |start_b .... end_b|  <---> |start_a ... end_a|
+    # so return not or either of these
+    return not (end_a < start_b or start_a > end_b)
+
+
+def max_overlapping(intervals):
+    current_max = 0
+    for interval in intervals:
+        num_overlapping = sum(overlaps(interval, other_interval)
+                              for other_interval in intervals
+                              if interval is not other_interval)
+        current_max = max(current_max, num_overlapping)
+    return current_max
 
 
 
